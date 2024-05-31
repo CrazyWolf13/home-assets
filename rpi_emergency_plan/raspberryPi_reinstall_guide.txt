@@ -1,0 +1,149 @@
+sudo raspi-config
+sudo apt-get update
+sudo apt-get upgrade
+# set up VNC
+
+Mounting External HDD:
+sudo apt install ntfs-3g exfat-fuse exfat-utils
+df -h
+sudo blkid /dev/sdb1 {
+UUID="7EDCBE30DCBDE297"
+}
+
+sudo mkdir -p /mnt/Seagate
+#sudo chown -R pi:pi /mnt/Seagate
+sudo chmod 775 /mnt/Seagate
+UUID=[UUID] /mnt/usb1 ntfs-3g defaults,auto,users,rw,nofail,noatime 0 0
+sudo nano /etc/fstab {
+UUID="7EDCBE30DCBDE297" /mnt/Seagate ntfs-3g uid=1000,gid=1000,dmask=022,fmask=133,defaults,auto,users,rw,nofail.noatime 0 0
+}
+
+sudo apt-get install screen -y
+python3 -m pip install -U yt-dlp
+PATH=$PATH:/home/pi/.local/bin
+
+
+Samba installation:
+sudo apt-get install samba samba-common-bin
+sudo nano /etc/samba/smb.conf {
+[Pi-NAS]
+path = /mnt/Seagate/NAS
+writeable=Yes
+create mask=0777
+directory mask=0777
+public=yes
+guest ok = no
+
+[Pi-NAS-Private]
+path = /mnt/Seagate
+writeable=Yes
+create mask=0777
+directory mask=0777
+public=yes
+guest ok = no
+vfs object = recycle
+recycle:repository = .recycle
+recycle:keeptree = Yes
+recycle:touch = Yes
+recycle:versions = Yes
+recycle:maxsize = 0
+}
+
+sudo smbpasswd -a pi {
+MyHomeNASRPI8964
+}
+
+sudo systemctl restart smbd
+sudo systemctl restart nmbd
+
+Docker Containers:
+Jellyfin
+Docker
+Glances
+Pi-Hole
+Grafana
+Telegraf
+InfluxDB 1.8!
+Portainer
+NginxProxyManager
+Dashy
+
+
+Different Fixes:
+sudo apt-get install at-spi2-core ##plink-fix
+pip install streamlink
+sudo apt install lm-sensors -y ##bpytop temperature
+sudo ln -s /usr/bin/lxterminal /usr/bin/xterm ##xterm-fix
+
+
+Configuring Cron:
+sudo nano /etc/crontab 
+18 23   * * *   root    bash /home/pi/Documents/ffmpeg_yt-dlp_poweroff
+15 21   * * 0,2,4,6 root find /mnt/Seagate/.recycle -type f -mtime +14 -delete
+0 13    * * 2   root     > /var/log/apt/cron-auto-updates.txt
+0 14    * * *   root    /usr/bin/apt update -q -y >> /var/log/apt/cron-auto-updates.txt
+0 15    * * *   root    /usr/bin/apt upgrade -q -y >> /var/log/apt/cron-auto-updates.txt
+
+
+Installing Nala:
+echo "deb [arch=armhf] http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+wget http://ftp.ch.debian.org/debian/pool/main/m/markdown-it-py/python3-markdown-it_2.1.0-5_all.deb
+wget http://ftp.ch.debian.org/debian/pool/main/m/mdurl/python3-mdurl_0.1.2-1_all.deb
+sudo apt install ./python3-mdurl_0.1.2-1_all.deb
+sudo apt install ./python3-markdown-it_2.1.0-5_all.deb
+sudo apt update && sudo apt install nala
+
+
+Installing Tailscale:
+sudo apt install apt-transport-https -y
+curl -fsSL https://pkgs.tailscale.com/stable/raspbian/bullseye.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg > /dev/null
+curl -fsSL https://pkgs.tailscale.com/stable/raspbian/bullseye.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+sudo apt update && sudo apt install tailscale
+sudo tailscale up
+
+bpytop:
+sudo apt install bpytop
+
+Data retention Policy InfluxDB:
+use raspberry_live
+show retention policies
+create retention policy "1 Week" ON "raspberry_live" Duration 7d Replication 1
+alter retention policy "1 Week" on "raspberry_live" DEFAULT
+
+Set this to stop high cpu usage on InfluxDB(portainer env variable):
+INFLUXDB_MONITOR_STORE_ENABLED=false 
+
+update vcgencmd path in telegraf.conf:
+??????????????????????????????????????????????????????????????????????????????????????
+###############################################################################
+#                            INPUT PLUGINS                                    #
+###############################################################################
+
+
+[[inputs.net]]
+[[inputs.netstat]]
+[[inputs.file]]
+  files = ["/sys/class/thermal/thermal_zone0/temp"]
+  name_override = "cpu_temperature"
+  data_format = "value"
+  data_type = "integer"
+[[inputs.exec]]
+  commands = ["/usr/bin/vcgencmd measure_temp"]
+  name_override = "gpu_temperature"
+  data_format = "grok"
+  grok_patterns = ["%{NUMBER:value:float}"]
+??????????????????????????????????????????????????????????????????????????????????????
+
+
+Overclock:
+sudo nano /boot/config.txt
+???????????????????????????????
+arm_freq=1500
+gpu_freq=500
+core_freq=500
+sdram_freq=500
+sdram_schmoo=0x02000020
+over_voltage=6
+sdram_over_voltage=2
+???????????????????????????????
