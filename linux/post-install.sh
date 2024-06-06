@@ -27,7 +27,7 @@ general_install() {
     sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
     sudo apt update
     sudo apt upgrade -y
-    sudo apt install -y nala btop screen
+    sudo apt install -y nala btop screen fastfetch
     clear
     echo "IP is: $(hostname -I | awk '{print $1}')"
     echo "Hostname is: $(hostname)"
