@@ -348,13 +348,11 @@ $programs = @(
     @{description="Corel VideoStudio Pro 2019"; url="Exe in Zip files added to installation Guide on Bookstack"; question="Did you follow the guide to install Corel VideoStudio Pro 2019?"}
     @{description="Office"; url="https://setup.office.com"; question="Have you set up Office via setup.office.com?"}
     @{description="Corsair iCUE"; url="https://www.corsair.com/de/de/s/downloads"; question="Did you download and install Corsair iCUE?"}
-    @{description="Microsoft Visual Code"; url="https://code.visualstudio.com/download"; question="Have you installed Microsoft Visual Code?"}
     @{description="Roccat Mouse"; url="https://support.roccat.com/s/downloads"; question="Did you download the driver for Roccat Mouse?"}
     @{description="iTunes (NOT Store Version!)"; url="https://support.apple.com/de-ch/HT210384"; question="Have you installed iTunes from the provided link?"}
     @{description="Sideloadly"; url="https://sideloadly.io/"; question="Did you install Sideloadly?"}
     @{description="GFPGAN"; url="https://github.com/CrazyWolf13/auto_gfpgan-installer"; question="Have you set up GFPGAN for Ahnenfotos?"}
     @{description="WinAero Tweaker"; url="https://winaerotweaker.com/"; question="Did you install WinAero Tweaker?"}
-    @{description="Modrinth"; url="https://modrinth.com/app"; question="Have you installed Modrinth app?"}
     @{description="Nvidia CUDA for Ahnenfotos"; url="https://developer.nvidia.com/cuda-downloads"; question="Is Nvidia CUDA installed for Ahnenfotos?"}
     @{description="ChrisTitusTweaker"; url="irm https://christitus.com/win | iex"; question="Did you run the ChrisTitusTweaker script?"}
     @{description="WSL2"; url="wsl --install -d ubuntu"; question="Is WSL2 installed with Ubuntu?"}
@@ -455,10 +453,10 @@ $tasks = @(
 while ($true) {
     $userInput = Read-Host "Would you like to open some helpful screenshots now? (y/n)"
     if ($userInput -eq 'y') {
-        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/installer/main/windows/assets/screenshot_key.png"
-        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/installer/main/windows/assets/download_folder_fix.png"
-        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/installer/main/windows/assets/ChrisTitusWinUtil.png"
-        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/installer/main/windows/assets/pptx_embed_font.jpg"
+        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/home-assets/main/windows/assets/screenshot_key.png"
+        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/home-assets/main/windows/assets/download_folder_fix.png"
+        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/home-assets/main/windows/assets/ChrisTitusWinUtil.png"
+        Start-Process "https://raw.githubusercontent.com/CrazyWolf13/home-assets/main/windows/assets/pptx_embed_font.jpg"
         break
     } elseif ($userInput -eq 'n') {
         Write-Host "Cancelled"
@@ -473,7 +471,7 @@ while ($true) {
 Invoke-Tasks $programs
 
 # Process the configuration tasks
-Invoke-Tasks $configTasks
+Invoke-Tasks $Tasks
 
 # Prompt for reboot
 while ($true) {
