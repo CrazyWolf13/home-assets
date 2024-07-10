@@ -471,7 +471,7 @@ while ($true) {
 Invoke-Tasks $programs
 
 # Process the configuration tasks
-Invoke-Tasks $Tasks
+Invoke-Tasks $tasks
 
 # Prompt for reboot
 while ($true) {
