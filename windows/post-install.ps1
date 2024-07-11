@@ -399,7 +399,6 @@ $tasks = @(
     @{description="Copy and reimport Fortnite Settings from %localappdata%\FortniteGame\Saved\Config\WindowsClient\"; question="Are the Fortnite Settings reimported?"}
     @{description="Reinstall Video Studio 2021 (Via Zip File added in Software List, Bookstack)"; question="Did you reinstall Video Studio 2021?"}
     @{description="Install Macrodeck, Import Appdata Folder and change IP in config, redo all updates to beta, create taskscheduler tasks"; question="Is Macrodeck installed and configured?"}
-    @{description="Install Bluetooth Audio Receiver from MSStore"; question="Is Bluetooth Audio Receiver installed?"}
     @{description="Install MS Office from setup.office.com: Sign into School and Work Accounts, Open all Notebooks on OneNote, Run updates"; question="Is MS Office installed and configured?"}
     @{description="Install GFPGAN with Batch on Github: Run the Modifier Scripts and test whole GFPGAN stuff. Fix GFPGAN by https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/13985"; question="Is GFPGAN installed and configured?"}
     @{description="Download VSCode Installer: Additional Tasks (add 'open in vscode' to right click menu), Sign In"; question="Is VSCode installed and configured?"}
