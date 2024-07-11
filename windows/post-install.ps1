@@ -358,7 +358,7 @@ $programs = @(
     @{description="WSL2"; url="wsl --install -d ubuntu"; question="Is WSL2 installed with Ubuntu?"}
     @{description="Gog: The Settlers"; url=""; question="Have you installed The Settlers from Gog?"}
     @{description="Steam: TimeSpy"; url=""; question="Did you install TimeSpy on Steam?"}
-    @{description="Steam: Call of Duty"; url=""; question="Is Call of Duty installed via Steam?"}
+    @{description="Steam: Couterstrike 2"; url=""; question="Is CS 2 installed via Steam?"}
     @{description="Steam: Crosshair V2"; url=""; question="Have you installed Crosshair V2 from Steam?"}
     @{description="EpicGames: Fortnite"; url=""; question="Is Fortnite installed from EpicGames?"}
 )
@@ -438,6 +438,7 @@ $tasks = @(
     @{description="Set Background Image"; question="Is the background image set to your preference?"}
     @{description="Match Real-life Display Orientation to Windows Orientation"; question="Have you matched the display orientation in Windows to your physical setup?"}
     @{description="Standard applications"; question="Have you set up all standard applications"}
+    @{description="Import config files"; question="Have you imported all Config files from 10.10.20.8\omv\dropzone\configs ?"}
     @{description="Clock Fix"; question="Have you fixed the linux clock by running `sudo timedatectl set-local-rtc 1` on any linux that is dualbooted?"}
 )
 
