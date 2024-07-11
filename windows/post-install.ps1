@@ -403,33 +403,25 @@ $tasks = @(
     @{description="Install GFPGAN with Batch on Github: Run the Modifier Scripts and test whole GFPGAN stuff. Fix GFPGAN by https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/13985"; question="Is GFPGAN installed and configured?"}
     @{description="Download VSCode Installer: Additional Tasks (add 'open in vscode' to right click menu), Sign In"; question="Is VSCode installed and configured?"}
     @{description="Install Roccat Swarm: Import Macros and Profiles"; question="Did you install and configure Roccat Swarm?"}
-    @{description="Install Jellyfin Media Player: Enter credentials"; question="Is Jellyfin Media Player installed?"}
-    @{description="Install iTunes and iCloud (NOT Microsoft Store Version!): Sign into iTunes"; question="Is iTunes and iCloud installed?"}
-    @{description="Install Sideloadly: Install Dependencies"; question="Did you install Sideloadly?"}
     @{description="Copy Videos, Images and Download Userfolders"; question="Are Videos, Images, and Userfolders copied?"}
     @{description="Install Minecraft Launcher from Microsoft Store: Import .minecraft Folder, Install Modrinth and Import all Data, Import all LunarClient Data: Set up LunarClient, Change Path in .lunarclient/settings/launcher.json"; question="Is the Minecraft Launcher installed and configured?"}
     @{description="Install Veeam Agent for Microsoft Windows: Configure Backup"; question="Is Veeam Agent installed and backup configured?"}
-    @{description="Install Windows Subsystem for Linux with wsl --install Command"; question="Is WSL installed?"}
     @{description="Set up TranslucentTB"; question="Is TranslucentTB set up?"}
     @{description="Sign into Adobe online and Download Product"; question="Have you signed into Adobe and downloaded the product?"}
     @{description="Export and reimport Task Scheduler Tasks: Use Microsoft Account Password"; question="Are the Task Scheduler Tasks exported and reimported?"}
     @{description="Change Hardware Clock Sync in Linux Systems if conflicting: sudo timedatectl set-local-rtc 1"; question="Is the Hardware Clock Sync in Linux Systems set?"}
     @{description="Clean Images\Batchs Folder and changed 'Minecraft Survival Backup.bat'"; question="Is the Images\Batchs Folder cleaned and Minecraft Survival Backup.bat changed?"}
     @{description="Sign into Google Drive"; question="Are you signed into Google Drive?"}
-    @{description="Install Modrinth"; question="Is Modrinth installed?"}
     @{description="Configure WingetUI and run Updates, import latest packages file from software list"; question="Is WingetUI configured and updated?"}
     @{description="Setup Modern Flyouts: Disable all except Audio"; question="Is Modern Flyouts set up with only Audio enabled?"}
     @{description="Windows Defender: Turn on all Features"; question="Are all Windows Defender Features turned on?"}
     @{description="Import Autostart Script and put it into C:\Users\tobia\Pictures\Batchs\Autostart.pyw: Create a shortcut to shell:startup"; question="Is the Autostart Script imported and shortcut created?"}
-    @{description="SSH Key: Generate one, copy to necessary devices, Input into Github: ssh-keygen -t ed25519 -b 1028"; question="Is the SSH Key generated and input into GitHub?"}
     @{description="Install and Configure ExplorerPatcher"; question="Is ExplorerPatcher installed and configured?"}
     @{description="Explorer: 'Open File Explorer for This PC', Compact View, Show Seconds on Taskbar, Enable Network Sharing, Connect OMV- + Pi-Share with Credentials Manually"; question="Is the Explorer configured with the necessary settings?"}
-    @{description="ChrisTitusScript"; question="Did you run the ChrisTitusScript?"}
     @{description="Win Aero Tweaker (File added in bookstack)"; question="Is Win Aero Tweaker configured?"}
     @{description="OO Shutup(file aded in bookstack)"; question="Have you executed OO Shutup with my config?"}
     @{description="Setup Triple Displays: Rainmeter, Set VSCode as Editor, Correct Honeycomb Paths, Background Image, Match Real-life Display orientation, Configure Night-Mode, Set FancyZones Zones, Set accent Color, Set Windows Spotlight as Lockscreen, Disable Lockscreen Timeout via Registry: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\7516b95f-f776-4464-8c53-06167f40cc99\8EC4B3A5-6868-48c2-BE75-4F3044BE88A7, Set Attributes to '2'"; question="Are the Triple Displays set up correctly?"}
     @{description="Add Bluetooth Devices"; question="Are the Bluetooth Devices added?"}
-    @{description="Set Time on PowerToys Mouse shake"; question="Is the Time on PowerToys Mouse shake set?"}
     @{description="Connect Rainmeter WebNowPlaying Redux + Macrodeck "; question="Is Rainmeter + Macrodeck connected to WebNowPlaying Redux?"}
     @{description="Import all Disks and SSDs Data"; question="Are all Disks and SSDs Data imported?"}
     @{description="Stop grouping via Time in Explorer"; question="Is grouping by Time stopped in Explorer?"}
