@@ -377,7 +377,7 @@ $tasks = @(
     @{description="Add Static entry for 'raw.githubusercontent.com' to windows hosts file"; question="Is the Static entry added to the hosts file?"}
     @{description="Set up Firefox: Sign in and activate sync, Set as default Browser, Configure Extensions, Readd old 7TV Extension, Reconfigure BTTV, 7TV, FFZ, Set 'extensions.pocket.enabled' to false, Sign-Ins, Enable 'Tab audio muting UI control', Set Dark UI and Background Image"; question="Is Firefox set up with the required configurations?"}
     @{description="Vmware Workstation Licensing via Github"; question="Is Vmware Workstation licensed via GitHub?"}
-    @{description="Configure Nilesoft Shell with my config from my repository"; question="Is Nilesoft Shell configured ?"}
+    @{description="Configure Nilesoft Shell with my config from my repository"; question="Is Nilesoft Shell configured https://github.com/CrazyWolf13/dotfiles/blob/main/customisation/nilesoftShell/README.md ?"}
     @{description="Backup and load MusicBrainzPicard Backup file"; question="Is the MusicBrainzPicard backup file loaded?"}
     @{description="Run GeForce Experience to update Graphics Drivers"; question="Did you run GeForce Experience to update the Graphics Drivers?"}
     @{description="Change default 'Change image size' tooltips to percent instead of pixel (IMG Resize by PowerToys)"; question="Is the 'Change image size' tooltip set to percent in PowerToys?"}
