@@ -1,2 +1,2 @@
 # home-assets
-Some private assets and scripts
+Some assets and scripts
