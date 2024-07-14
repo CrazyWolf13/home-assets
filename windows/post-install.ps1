@@ -45,7 +45,7 @@ $DevApps = @(
 )
 
 $essentialApps = @(
-    "Microsoft.VisualStudioCode", "Microsoft.WindowsTerminal", "Mozilla.Firefox"
+    "Microsoft.VisualStudioCode", "Microsoft.WindowsTerminal", "Mozilla.Firefox", "tailscale.tailscale"
 )
 
 $defaultApps = @(
