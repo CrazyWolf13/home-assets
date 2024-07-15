@@ -440,6 +440,7 @@ $tasks = @(
     @{description="Standard applications"; question="Have you set up all standard applications"}
     @{description="Import config files"; question="Have you imported all Config files from 10.10.20.8\omv\dropzone\configs ?"}
     @{description="Clock Fix"; question="Have you fixed the linux clock by running `sudo timedatectl set-local-rtc 1` on any linux that is dualbooted?"}
+        @{description="Custom Sandbox"; question="Have youset up the custom Windows Sandbox config from my home-assets repository?"}
 )
 
 while ($true) {
