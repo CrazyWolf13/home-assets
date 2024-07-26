@@ -349,6 +349,7 @@ $programs = @(
     @{description="Office"; url="https://setup.office.com"; question="Have you set up Office via setup.office.com?"}
     @{description="Corsair iCUE"; url="https://www.corsair.com/de/de/s/downloads"; question="Did you download and install Corsair iCUE?"}
     @{description="Roccat Mouse"; url="https://support.roccat.com/s/downloads"; question="Did you download the driver for Roccat Mouse?"}
+    @{description="FileZilla"; url="https://filezilla-project.org/download.php?type=client"; question="Did you download FileZilla?"}
     @{description="iTunes (NOT Store Version!)"; url="https://support.apple.com/de-ch/HT210384"; question="Have you installed iTunes from the provided link?"}
     @{description="Sideloadly"; url="https://sideloadly.io/"; question="Did you install Sideloadly?"}
     @{description="GFPGAN"; url="https://github.com/CrazyWolf13/auto_gfpgan-installer"; question="Have you set up GFPGAN for Ahnenfotos?"}
