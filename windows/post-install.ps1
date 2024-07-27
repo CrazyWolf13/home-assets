@@ -63,8 +63,8 @@ $otherApps = @(
     "GnuCash.GnuCash", "Garmin.Express",
     "MusicBrainz.Picard", "Balena.Etcher", "VMware.WorkstationPro",
     "Macrodeck.macrodeck", "Jellyfin.JellyfinMediaPlayer",
-    "WiresharkFoundation.Wireshark", "Rufus.Rufus", "Brave.Brave", 
-    "Google.GoogleDrive", "RaspberryPiFoundation.RaspberryPiImager", "Samsung.DeX", 
+    "WiresharkFoundation.Wireshark", "Rufus.Rufus", "Brave.Brave",
+    "RaspberryPiFoundation.RaspberryPiImager", "Samsung.DeX", 
     "Samsung.SmartSwitch","Nvidia.CUDA"
 )
 
