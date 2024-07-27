@@ -45,7 +45,7 @@ $DevApps = @(
 )
 
 $essentialApps = @(
-    "Microsoft.VisualStudioCode", "Microsoft.WindowsTerminal", "Mozilla.Firefox", "tailscale.tailscale"
+    "Microsoft.VisualStudioCode", "Microsoft.WindowsTerminal", "Mozilla.Firefox", "tailscale.tailscale",
 )
 
 $defaultApps = @(
@@ -56,7 +56,7 @@ $defaultApps = @(
     "OpenWhisperSystems.signal", "valinet.ExplorerPatcher", 
     "AdrienAllard.FileConverter", "JanDeDobbeleer.OhMyPosh", 
     "Insomnia.Insomnia", "Element.Element", "Flameshot.Flameshot", 
-    "localsend.localsend", "SomePythonThings.WingetUIStore"
+    "localsend.localsend", "SomePythonThings.WingetUIStore", "ProtonTechnologies.ProtonVPN"
 )
 
 $otherApps = @(
