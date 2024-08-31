@@ -41,7 +41,7 @@ $DevApps = @(
     "OpenJS.NodeJS", "Git.Git", "Python.Python.3.11", 
     "Microsoft.DotNet.DesktopRuntime.7", "yt-dlp.yt-dlp", 
     "gnu.wget2", "curl.curl","streamlink.streamlink", 
-    "Microsoft.Powershell", "Famatech.AdvancedIPScanner", "Iterate.Cyberduck"
+    "Microsoft.Powershell", "Famatech.AdvancedIPScanner", "Iterate.Cyberduck", "Obsidian.Obsidian"
 )
 
 $essentialApps = @(
