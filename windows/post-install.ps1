@@ -27,13 +27,11 @@ $gamingApps = @(
     "Mojang.MinecraftLauncher", "Moonsworth.LunarClient", 
     "EpicGames.EpicGamesLauncher", "GOG.Galaxy", "Valve.Steam", 
     "Modrinth.ModrinthApp", "Guru3D.Afterburner", 
-    "RazerInc.RazerInstaller", "Nvidia.GeForceExperience", 
-    "Discord.Discord"
+    "RazerInc.RazerInstaller", "Discord.Discord"
 )
 
 $creativeApps = @(
-    "JGraph.Draw", "Adobe.Acrobat.Reader.64-bit", 
-    "OBSProject.OBSStudio", "KDE.Kdenlive", "GIMP.GIMP", 
+    "JGraph.Draw", "OBSProject.OBSStudio", "KDE.Kdenlive", "GIMP.GIMP", 
     "Rainmeter.Rainmeter", "Inkscape.Inkscape"
 )
 
@@ -42,7 +40,7 @@ $DevApps = @(
     "Microsoft.DotNet.DesktopRuntime.7", "yt-dlp.yt-dlp", 
     "gnu.wget2", "curl.curl","streamlink.streamlink", 
     "Microsoft.Powershell", "Famatech.AdvancedIPScanner", 
-    "Iterate.Cyberduck", "Obsidian.Obsidian", "dorssel.usbipd-win"
+    "Obsidian.Obsidian", "dorssel.usbipd-win"
 )
 
 $essentialApps = @(
@@ -62,8 +60,7 @@ $defaultApps = @(
 
 $otherApps = @(
     "GnuCash.GnuCash", "Garmin.Express",
-    "MusicBrainz.Picard", "Balena.Etcher", "VMware.WorkstationPro",
-    "Macrodeck.macrodeck", "Jellyfin.JellyfinMediaPlayer",
+    "MusicBrainz.Picard", "Balena.Etcher", "VMware.WorkstationPro", 
     "WiresharkFoundation.Wireshark", "Rufus.Rufus", "Brave.Brave",
     "RaspberryPiFoundation.RaspberryPiImager", "Samsung.DeX", 
     "Samsung.SmartSwitch","Nvidia.CUDA"
@@ -73,7 +70,7 @@ $pythonPackages = @(
     "selenium", "websockets", "alive_progress", "beautifulsoup4", 
     "chromedriver", "browserist", "pytz", "tqdm", "requests",
     "Markdown", "Future", "Jinja2", "pyautogui", 
-    "fastapi", "starlette", "pydantic", "uvicorn[standard]"
+    "fastapi[all]", "starlette", "pydantic", "uvicorn[standard]"
 )
 
 # Categories
