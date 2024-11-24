@@ -341,7 +341,6 @@ function Invoke-Tasks($tasks) {
 
 # Array of program tasks
 $programs = @(
-    @{description="Veeam Agent for Windows"; url="https://www.veeam.com/de/agent-for-windows-community-edition.html"; question="Have you installed Veeam Agent for Windows?"}
     @{description="Farming Simulator 19"; url="https://eshop.giants-software.com/downloads.php"; question="Have you installed Farming Simulator 19 from CD or Web?"}
     @{description="Corel VideoStudio Pro 2019"; url="Exe in Zip files added to installation Guide on Bookstack"; question="Did you follow the guide to install Corel VideoStudio Pro 2019?"}
     @{description="Office"; url="https://setup.office.com"; question="Have you set up Office via setup.office.com?"}
@@ -358,6 +357,7 @@ $programs = @(
     @{description="Steam: TimeSpy"; url=""; question="Did you install TimeSpy on Steam?"}
     @{description="Steam: Couterstrike 2"; url=""; question="Is CS 2 installed via Steam?"}
     @{description="Steam: Crosshair V2"; url=""; question="Have you installed Crosshair V2 from Steam?"}
+    @{description="EpicGames: Farming Simulator 22"; url=""; question="Is Farming Simulator 22 installed from EpicGames?"}
     @{description="EpicGames: Fortnite"; url=""; question="Is Fortnite installed from EpicGames?"}
 )
 
@@ -418,7 +418,7 @@ $tasks = @(
     @{description="Explorer: 'Open File Explorer for This PC', Compact View, Show Seconds on Taskbar, Enable Network Sharing, Connect OMV- + Pi-Share with Credentials Manually"; question="Is the Explorer configured with the necessary settings?"}
     @{description="Win Aero Tweaker (File added in bookstack)"; question="Is Win Aero Tweaker configured?"}
     @{description="OO Shutup(file aded in bookstack)"; question="Have you executed OO Shutup with my config?"}
-    @{description="Setup Triple Displays: Rainmeter, Set VSCode as Editor, Correct Honeycomb Paths, Background Image, Match Real-life Display orientation, Configure Night-Mode, Set FancyZones Zones, Set accent Color, Set Windows Spotlight as Lockscreen, Disable Lockscreen Timeout via Registry: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\7516b95f-f776-4464-8c53-06167f40cc99\8EC4B3A5-6868-48c2-BE75-4F3044BE88A7, Set Attributes to '2'"; question="Are the Triple Displays set up correctly?"}
+    @{description="Setup Triple Displays: Rainmeter, Set VSCode as Editor, Background Image, Match Real-life Display orientation, Configure Night-Mode, Set FancyZones Zones, Set accent Color, Set Windows Spotlight as Lockscreen, Disable Lockscreen Timeout via Registry: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\7516b95f-f776-4464-8c53-06167f40cc99\8EC4B3A5-6868-48c2-BE75-4F3044BE88A7, Set Attributes to '2'"; question="Are the Triple Displays set up correctly?"}
     @{description="Add Bluetooth Devices"; question="Are the Bluetooth Devices added?"}
     @{description="Connect Rainmeter WebNowPlaying Redux + Macrodeck "; question="Is Rainmeter + Macrodeck connected to WebNowPlaying Redux?"}
     @{description="Import all Disks and SSDs Data"; question="Are all Disks and SSDs Data imported?"}
