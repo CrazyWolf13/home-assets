@@ -51,6 +51,29 @@ install_qol_tools() {
     fi
 }
 
+# Function to inject content into .bashrc
+inject_bashrc() {
+    read -p "Do you want to inject custom settings into your .bashrc file? [y/N]: " activate_bashrc
+    if [[ "$activate_bashrc" =~ ^[Yy]$ ]]; then
+        echo "Injecting custom settings into .bashrc..."
+        
+        # Prompt for personal token input
+        read -sp "Enter your GitHub personal access token: " PERSONAL_TOKEN
+        echo
+        
+        # Prompt for raw URL input
+        RAW_URL="https://raw.githubusercontent.com/CrazyWolf13/chezmoi/refs/heads/main/dot_bashrc"
+        
+        # Use curl to download and inject the custom .bashrc content
+        curl -H "Authorization: token $PERSONAL_TOKEN" "$RAW_URL" -o ~/.bashrc_injected
+        cat ~/.bashrc_injected >> ~/.bashrc
+        rm .bashrc_injected
+        echo "Custom settings have been injected into your .bashrc."
+    else
+        echo "Skipping .bashrc injection."
+    fi
+}
+
 # Main script logic
 if check_gui; then
     echo "GUI environment detected. Running GUI-specific installation..."
@@ -65,3 +88,6 @@ general_install
 
 # Ask user if they want to install quality of life tools
 install_qol_tools
+
+# Ask user if they want to inject custom settings into .bashrc
+inject_bashrc
