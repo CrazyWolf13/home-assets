@@ -2,7 +2,7 @@
 
 # How to execute this script:
 # Run the following command in your terminal:
-# curl -sSL https://github.com/CrazyWolf13/home-assets/edit/main/linux/post-install.sh | bash
+# bash <(curl -sSL https://raw.githubusercontent.com/CrazyWolf13/home-assets/refs/heads/main/linux/post-install.sh)
 
 # Function to check for GUI environment
 check_gui() {
