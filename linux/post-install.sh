@@ -61,13 +61,10 @@ inject_bashrc() {
         read -sp "Enter your GitHub personal access token: " PERSONAL_TOKEN
         echo
         
-        # Prompt for raw URL input
-        RAW_URL="https://raw.githubusercontent.com/CrazyWolf13/chezmoi/refs/heads/main/dot_bashrc"
+        # The line to be added to .bashrc
+        echo "ACCES_TOKEN=$PERSONAL_TOKEN" >> ~/.bashrc
+        echo "bash <(curl -H \"Authorization: token $PERSONAL_TOKEN\" -sSL https://raw.githubusercontent.com/CrazyWolf13/chezmoi/refs/heads/main/dot_bashrc)" >> ~/.bashrc
         
-        # Use curl to download and inject the custom .bashrc content
-        curl -H "Authorization: token $PERSONAL_TOKEN" "$RAW_URL" -o ~/.bashrc_injected
-        cat ~/.bashrc_injected >> ~/.bashrc
-        rm .bashrc_injected
         echo "Custom settings have been injected into your .bashrc."
     else
         echo "Skipping .bashrc injection."
