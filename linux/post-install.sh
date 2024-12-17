@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# How to execute this script:
+# Run the following command in your terminal:
+# curl -sSL https://github.com/CrazyWolf13/home-assets/edit/main/linux/post-install.sh | bash
+
 # Function to check for GUI environment
 check_gui() {
     if [ -n "$DISPLAY" ] || [ -n "$WAYLAND_DISPLAY" ] || [ -n "$MIR_SOCKET" ]; then
@@ -27,11 +31,24 @@ general_install() {
     sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
     sudo apt update
     sudo apt upgrade -y
-    sudo apt install -y nala btop screen fastfetch
+    sudo apt install -y nala btop screen fastfetch git fdisk xclip
     clear
     echo "IP is: $(hostname -I | awk '{print $1}')"
     echo "Hostname is: $(hostname)"
     echo "Done!"
+}
+
+# Function for installing quality of life tools
+install_qol_tools() {
+    read -p "Do you want to install quality of life tools (bat, eza, fzf, cmatrix, duf, grc, oh-my-posh)? [y/N]: " install_qol
+    if [[ "$install_qol" =~ ^[Yy]$ ]]; then
+        echo "Installing quality of life tools..."
+        sudo apt install -y bat eza fzf cmatrix duf grc
+        curl -s https://ohmyposh.dev/install.sh | bash
+        echo "Quality of life tools installed!"
+    else
+        echo "Skipping quality of life tools installation."
+    fi
 }
 
 # Main script logic
@@ -45,3 +62,6 @@ fi
 
 # Run general installation tasks
 general_install
+
+# Ask user if they want to install quality of life tools
+install_qol_tools
