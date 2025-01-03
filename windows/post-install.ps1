@@ -36,7 +36,7 @@ $creativeApps = @(
 )
 
 $DevApps = @(
-    "OpenJS.NodeJS", "Git.Git", "Python.Python.3.11", 
+    "OpenJS.NodeJS", "Git.Git", "Python.Python.3.13", 
     "Microsoft.DotNet.DesktopRuntime.7", "yt-dlp.yt-dlp", 
     "gnu.wget2", "curl.curl","streamlink.streamlink", 
     "Microsoft.Powershell", "Famatech.AdvancedIPScanner", 
@@ -44,14 +44,14 @@ $DevApps = @(
 )
 
 $essentialApps = @(
-    "Microsoft.VisualStudioCode", "Microsoft.WindowsTerminal", "Mozilla.Firefox", "tailscale.tailscale",
+    "Microsoft.VisualStudioCode", "Microsoft.WindowsTerminal", "Mozilla.Firefox", "tailscale.tailscale"
 )
 
 $defaultApps = @(
     "9NKSQGP7F2NH", "9N9WCLWDQS5J", "9PF4KZ2VN4W9", "9MT60QV066RP",
     "7zip.7zip", "AnyDeskSoftwareGmbH.AnyDesk", 
     "DeepL.DeepL", "VideoLAN.VLC", "Microsoft.PowerToys", 
-    "Oracle.JDK.18", "Nilesoft.Shell", "Bitwarden.Bitwarden", 
+    "Oracle.JDK.23", "Nilesoft.Shell", "Bitwarden.Bitwarden", 
     "OpenWhisperSystems.signal", "valinet.ExplorerPatcher", 
     "AdrienAllard.FileConverter", "JanDeDobbeleer.OhMyPosh", 
     "Insomnia.Insomnia", "Element.Element", "Flameshot.Flameshot", 
@@ -372,7 +372,6 @@ $tasks = @(
     @{description="Install Drivers of Hardware"; question="Have you installed the Hardware Drivers?"}
     @{description="Install Features: Developer-Mode, Drahtlose Anzeigen, Fax-und Scan, Speicherverwaltung, OpenSSH client, Windows Sandbox, WSL"; question="Are the necessary Features installed?"}
     @{description="Activate CloudSync on ViolentMonkey and uBlock Origin, backup and import FFZ addon"; question="Is CloudSync activated and FFZ addon backed up and imported?"}
-    @{description="Add Static entry for 'raw.githubusercontent.com' to windows hosts file"; question="Is the Static entry added to the hosts file?"}
     @{description="Set up Firefox: Sign in and activate sync, Set as default Browser, Configure Extensions, Readd old 7TV Extension, Reconfigure BTTV, 7TV, FFZ, Set 'extensions.pocket.enabled' to false, Sign-Ins, Enable 'Tab audio muting UI control', Set Dark UI and Background Image"; question="Is Firefox set up with the required configurations?"}
     @{description="Vmware Workstation Licensing via Github"; question="Is Vmware Workstation licensed via GitHub?"}
     @{description="Configure Nilesoft Shell with my config from my repository"; question="Is Nilesoft Shell configured https://github.com/CrazyWolf13/dotfiles/blob/main/customisation/nilesoftShell/README.md ?"}
@@ -385,7 +384,6 @@ $tasks = @(
     @{description="Turn off Notifications in Epic Games"; question="Are Notifications turned off in Epic Games?"}
     @{description="Setup Signal and WhatsApp"; question="Are Signal and WhatsApp set up?"}
     @{description="Sign into Firefox check Settings"; question="Have you signed into Firefox and checked settings?"}
-    @{description="Setup Dev Home App"; question="Is the Dev Home App set up?"}
     @{description="Test FireStrike and TimeSpy and set 3DMark the default app for .3dmark-result files"; question="Did you test FireStrike and TimeSpy and set 3DMark as the default app?"}
     @{description="Import GnuCash Files (%APPDATA\gnucash, C:\USER\Documents\GnuCash)"; question="Are the GnuCash Files imported?"}
     @{description="Import VideoStudio Pro Files (2 Directories in Documents Folder)"; question="Did you import the VideoStudio Pro Files?"}
@@ -396,26 +394,22 @@ $tasks = @(
     @{description="Start up Fortnite and Sign into Account"; question="Have you signed into Fortnite?"}
     @{description="Copy and reimport Fortnite Settings from %localappdata%\FortniteGame\Saved\Config\WindowsClient\"; question="Are the Fortnite Settings reimported?"}
     @{description="Reinstall Video Studio 2021 (Via Zip File added in Software List, Bookstack)"; question="Did you reinstall Video Studio 2021?"}
-    @{description="Install Macrodeck, Import Appdata Folder and change IP in config, redo all updates to beta, create taskscheduler tasks"; question="Is Macrodeck installed and configured?"}
     @{description="Install MS Office from setup.office.com: Sign into School and Work Accounts, Open all Notebooks on OneNote, Run updates"; question="Is MS Office installed and configured?"}
     @{description="Install GFPGAN with Batch on Github: Run the Modifier Scripts and test whole GFPGAN stuff. Fix GFPGAN by https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/13985"; question="Is GFPGAN installed and configured?"}
     @{description="Download VSCode Installer: Additional Tasks (add 'open in vscode' to right click menu), Sign In"; question="Is VSCode installed and configured?"}
     @{description="Install Roccat Swarm: Import Macros and Profiles"; question="Did you install and configure Roccat Swarm?"}
     @{description="Copy Videos, Images and Download Userfolders"; question="Are Videos, Images, and Userfolders copied?"}
     @{description="Install Minecraft Launcher from Microsoft Store: Import .minecraft Folder, Install Modrinth and Import all Data, Import all LunarClient Data: Set up LunarClient, Change Path in .lunarclient/settings/launcher.json"; question="Is the Minecraft Launcher installed and configured?"}
-    @{description="Install Veeam Agent for Microsoft Windows: Configure Backup"; question="Is Veeam Agent installed and backup configured?"}
     @{description="Set up TranslucentTB"; question="Is TranslucentTB set up?"}
-    @{description="Sign into Adobe online and Download Product"; question="Have you signed into Adobe and downloaded the product?"}
-    @{description="Export and reimport Task Scheduler Tasks: Use Microsoft Account Password"; question="Are the Task Scheduler Tasks exported and reimported?"}
     @{description="Change Hardware Clock Sync in Linux Systems if conflicting: sudo timedatectl set-local-rtc 1"; question="Is the Hardware Clock Sync in Linux Systems set?"}
-    @{description="Clean Images\Batchs Folder and changed 'Minecraft Survival Backup.bat'"; question="Is the Images\Batchs Folder cleaned and Minecraft Survival Backup.bat changed?"}
-    @{description="Sign into Google Drive"; question="Are you signed into Google Drive?"}
+    @{description="Clean Images\Batchs Folder"; question="Is the Images\Batchs Folder cleaned up?"}
+    @{description="Sign into Proton Drive"; question="Are you signed into Proton Drive?"}
     @{description="Configure WingetUI and run Updates, import latest packages file from software list"; question="Is WingetUI configured and updated?"}
     @{description="Setup Modern Flyouts: Disable all except Audio"; question="Is Modern Flyouts set up with only Audio enabled?"}
     @{description="Windows Defender: Turn on all Features"; question="Are all Windows Defender Features turned on?"}
     @{description="Import Autostart Script and put it into C:\Users\tobia\Pictures\Batchs\Autostart.pyw: Create a shortcut to shell:startup"; question="Is the Autostart Script imported and shortcut created?"}
     @{description="Install and Configure ExplorerPatcher"; question="Is ExplorerPatcher installed and configured?"}
-    @{description="Explorer: 'Open File Explorer for This PC', Compact View, Show Seconds on Taskbar, Enable Network Sharing, Connect OMV- + Pi-Share with Credentials Manually"; question="Is the Explorer configured with the necessary settings?"}
+    @{description="Explorer: 'Open File Explorer for This PC', Compact View, Show Seconds on Taskbar, Enable Network Sharing, Connect OMV"; question="Is the Explorer configured with the necessary settings?"}
     @{description="Win Aero Tweaker (File added in bookstack)"; question="Is Win Aero Tweaker configured?"}
     @{description="OO Shutup(file aded in bookstack)"; question="Have you executed OO Shutup with my config?"}
     @{description="Setup Triple Displays: Rainmeter, Set VSCode as Editor, Background Image, Match Real-life Display orientation, Configure Night-Mode, Set FancyZones Zones, Set accent Color, Set Windows Spotlight as Lockscreen, Disable Lockscreen Timeout via Registry: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\7516b95f-f776-4464-8c53-06167f40cc99\8EC4B3A5-6868-48c2-BE75-4F3044BE88A7, Set Attributes to '2'"; question="Are the Triple Displays set up correctly?"}
@@ -426,19 +420,14 @@ $tasks = @(
     @{description="Import VMs"; question="Are the VMs imported?"}
     @{description="Set Notepad to start with New Empty Tab instead of opening all ever opened files again"; question="Is Notepad set to start with a New Empty Tab?"}
     @{description="Remove unnecessary autostart-entrys: Taskscheduler, Taskmanager and Services"; question="Are the unnecessary autostart entries removed?"}
-    @{description="Run Asus Updater and install Wifi/Bluetooth-PCIE Driver for PCE-AX3000"; question="Did you run the Asus Updater and install the drivers?"}
-    @{description="Disable 'Asus Q-Installer' in Bios and delete 'C:\Windows\System32\ASUSUpdateCheck.exe' and 'C:\Program Files (x86)\ASUS\Q-Installer'"; question="Is 'Asus Q-Installer' disabled and the files deleted?"}
-    @{description="Set new user Path inside Macrodeck if Windows username changed"; question="Is the new user Path set in Macrodeck?"}
     @{description="Setup Flameshot to use PrtSc and disable snipping tool"; question="Is Flameshot set to use PrtSc and snipping tool disabled?"}
     @{description="Set this inside all Office applications to include fonts on export"; question="Is the setting to include fonts on export configured in Office applications?"}
     @{description="Set VSCode as Editor (C:\Users\tobia\AppData\Local\Programs\Microsoft VS Code)"; question="Did you set VSCode as the editor in Rainmeter any anywhere else?"}
-    @{description="Correct Honeycomb Paths"; question="Are the paths corrected in the Honeycomb skin configuration files?"}
     @{description="Set Background Image"; question="Is the background image set to your preference?"}
-    @{description="Match Real-life Display Orientation to Windows Orientation"; question="Have you matched the display orientation in Windows to your physical setup?"}
     @{description="Standard applications"; question="Have you set up all standard applications"}
     @{description="Import config files"; question="Have you imported all Config files from 10.10.20.8\omv\dropzone\configs ?"}
     @{description="Clock Fix"; question="Have you fixed the linux clock by running `sudo timedatectl set-local-rtc 1` on any linux that is dualbooted?"}
-        @{description="Custom Sandbox"; question="Have youset up the custom Windows Sandbox config from my home-assets repository?"}
+    @{description="Custom Sandbox"; question="Have youset up the custom Windows Sandbox config from my home-assets repository?"}
 )
 
 while ($true) {
