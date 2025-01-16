@@ -359,6 +359,7 @@ $programs = @(
     @{description="Steam: Crosshair V2"; url=""; question="Have you installed Crosshair V2 from Steam?"}
     @{description="EpicGames: Farming Simulator 22"; url=""; question="Is Farming Simulator 22 installed from EpicGames?"}
     @{description="EpicGames: Fortnite"; url=""; question="Is Fortnite installed from EpicGames?"}
+    @{description="Vikunja Desktop"; url=""; question="Is Vikunja Desktop unstable (msi) from https://dl.vikunja.io/desktop/unstable installed?"}
 )
 
 # Array of configuration tasks
