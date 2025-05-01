@@ -63,7 +63,7 @@ $otherApps = @(
     "MusicBrainz.Picard", "Balena.Etcher", "VMware.WorkstationPro", 
     "WiresharkFoundation.Wireshark", "Rufus.Rufus", "Brave.Brave",
     "RaspberryPiFoundation.RaspberryPiImager", "Samsung.DeX", 
-    "Samsung.SmartSwitch","Nvidia.CUDA"
+    "9nh4f7j77cpd","Nvidia.CUDA"
 )
 
 $pythonPackages = @(
