@@ -1,6 +1,3 @@
-[submodule "scripts/better-sandbox"]
-    path = scripts/better-sandbox
-    url = https://github.com/ThioJoe/Windows-Sandbox-Tools.git
 [submodule "scripts-collection/better-sandbox/Windows-Sandbox-Tools"]
 	path = scripts-collection/better-sandbox/Windows-Sandbox-Tools
 	url = https://github.com/ThioJoe/Windows-Sandbox-Tools.git
